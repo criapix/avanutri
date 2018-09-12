@@ -30,11 +30,15 @@ nav.navbar {
 }
 
 .user-info {
-  width: 190px;
+  width: 200px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   color: #fff;
+}
+
+.user-info__name {
+  line-height: 1.1;
 }
 
 .user-info img {
@@ -42,6 +46,7 @@ nav.navbar {
   border-radius: 50%;
   border: 2px solid #fff;
   box-sizing: content-box;
+  margin-left: 8px;
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -84,6 +89,10 @@ nav.navbar {
   color: #949494;
 }
 
+.patient .age {
+  font-size: 14px;
+}
+
 .menu-items {
   display: flex;
   flex-direction: column;
@@ -107,8 +116,16 @@ nav.navbar {
   background-color: #fff;
 }
 
+.menu-items li.active a {
+  color: #1D8C9F;
+}
+
 .menu-items li:hover {
   background-color: #fff;
+}
+
+.menu-items li:hover a {
+  color: #1D8C9F;
 }
 
 .menu-items li:last-child {
@@ -134,6 +151,10 @@ nav.navbar {
   font-size: 22px;
 }
 
+.menu-items li a span {
+  font-size: 14px;
+}
+
 /* ---------------------------------------------------
     SIDEBAR MOBILE STYLE
 ----------------------------------------------------- */
@@ -153,13 +174,17 @@ nav.navbar {
   margin-right: 10px;
   color: #fff;
 }
+.action-buttons .btn:last-child {
+  margin-right: 0;
+  color: #fff;
+}
 
 .action-buttons i {
   margin-right: 5px;
 }
 
 .card__title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #999;
 }
 
@@ -328,7 +353,7 @@ nav.navbar {
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
-@media (max-width: 768.98px) {
+@media (max-width: 768px) {
   #sidebar-mobile {
     display: block;
   }
@@ -353,7 +378,7 @@ nav.navbar {
     color: #fff;
   }
   .menu-items li.active a {
-    color: #000;
+    color: #1D8C9F;
   }
 
   .fab {
