@@ -32,12 +32,12 @@
     <div id="app">
 
         <!-- Login -->
-        <div id="login" ondblclick="trocarPagina(1)">
+        <div id="login">
             <div class="row wrapper-logo">
                 <img src="./img/logo-avanutri.png" alt="">
             </div>
             <div class="row">
-                <form class="col s12 form-login">
+                <form class="col s12 form-login" onsubmit="trocarPagina(1); return false;">
                     <div class="input-field col s12">
                         <input id="username" type="text" class="validate" placeholder="nome de usuário">
                         <label for="username">Usuário</label>
@@ -53,7 +53,7 @@
         </div>
 
         <!-- Esqueci a senha -->
-        <div id="forgot-account" style="display:none;" ondblclick="trocarPagina(2)">
+        <div id="forgot-account" style="display:none;">
             <nav>
                 <div class="nav-wrapper">
                     <a href="#" class=""><i class="material-icons">arrow_back</i></a>
@@ -71,16 +71,16 @@
                     </div>
                 </div>
                 <div class="row">
-                    <a class="waves-effect waves-light btn">CONTINUAR</a>
+                    <button type="button" class="waves-effect waves-light btn" onclick="trocarPagina(2)">CONTINUAR</a>
                 </div>
             </div>
         </div>
 
         <!-- Dados antropométricos atuais do usuário -->
-        <div id="user-anthropometric-data" style="display:none;" ondblclick="trocarPagina(3)">
+        <div id="user-anthropometric-data" style="display:none;">
             <nav>
                 <div class="nav-wrapper">
-                    <a href="#" class=""><i class="material-icons">arrow_back</i></a>
+                    <a href="#" class="" onclick="trocarPagina(3)"><i class="material-icons">arrow_back</i></a>
                     <div class="title">Dados Antropométricos</div>
                 </div>
             </nav>
@@ -223,10 +223,10 @@
         </div>
 
         <!-- Prescrição dietética -->
-        <div id="dietary-prescription" style="display: none;" ondblclick="trocarPagina(4)">
+        <div id="dietary-prescription" style="display: none;">
             <nav>
                 <div class="nav-wrapper">
-                    <a href="#" class=""><i class="material-icons">arrow_back</i></a>
+                    <a href="#" class="" onclick="trocarPagina(4)"><i class="material-icons">arrow_back</i></a>
                     <div class="title">Prescrição dietética</div>
                 </div>
             </nav>
@@ -434,10 +434,10 @@
         </div>
 
         <!-- Lista de substituição -->
-        <div id="replacement-list" style="display: none;" ondblclick="trocarPagina(5)">
+        <div id="replacement-list" style="display: none;">
             <nav>
                 <div class="nav-wrapper">
-                    <a href="#" class=""><i class="material-icons">arrow_back</i></a>
+                    <a href="#" class="" onclick="trocarPagina(5)"><i class="material-icons">arrow_back</i></a>
                     <div class="title">Lista de substituição</div>
                 </div>
             </nav>
@@ -484,10 +484,10 @@
         </div>
 
         <!-- Lista de compras -->
-        <div id="grocery-list" style="display: none;" ondblclick="trocarPagina(6)">
+        <div id="grocery-list" style="display: none;">
             <nav>
                 <div class="nav-wrapper">
-                    <a href="#" class=""><i class="material-icons">arrow_back</i></a>
+                    <a href="#" class="" onclick="trocarPagina(6)"><i class="material-icons">arrow_back</i></a>
                     <div class="title">Lista de compras</div>
                 </div>
             </nav>
@@ -534,10 +534,10 @@
         </div>
 
         <!-- Configuração de notificações -->
-        <div id="notifications" style="display: none;" ondblclick="trocarPagina(7)">
+        <div id="notifications" style="display: none;">
             <nav class="m-0">
                 <div class="nav-wrapper">
-                    <a href="#" class=""><i class="material-icons">arrow_back</i></a>
+                    <a href="#" class="" onclick="trocarPagina(7)"><i class="material-icons">arrow_back</i></a>
                     <div class="title">Notificações</div>
                 </div>
             </nav>
@@ -562,10 +562,10 @@
         </div>
 
         <!-- Receitas nutricionais -->
-        <div id="nutritional-recipes" style="display:none;" ondblclick="trocarPagina(8)">
+        <div id="nutritional-recipes" style="display:none;">
             <nav>
                 <div class="nav-wrapper">
-                    <a href="#" class=""><i class="material-icons">arrow_back</i></a>
+                    <a href="#" class="" onclick="trocarPagina(8)"><i class="material-icons">arrow_back</i></a>
                     <div class="title">Receitas</div>
                 </div>
             </nav>
@@ -590,10 +590,10 @@
         </div>
 
         <!-- Detalhes da receita -->
-        <div id="recipe-details" style="display:none;" ondblclick="trocarPagina(9)">
+        <div id="recipe-details" style="display:none;">
             <nav class="m-0">
                 <div class="nav-wrapper">
-                    <a href="#" class=""><i class="material-icons">arrow_back</i></a>
+                    <a href="#" class="" onclick="trocarPagina(9)"><i class="material-icons">arrow_back</i></a>
                     <div class="title">Receita</div>
                 </div>
             </nav>
