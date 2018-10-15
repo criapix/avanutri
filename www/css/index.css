@@ -23,6 +23,24 @@ body {
     background-color: #fff;
 }
 
+#content {
+    padding-bottom: 60px;
+}
+
+#content div nav {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+#content > div:not(#login) {
+    padding-top: 56px;
+}
+#content > div#dietary-prescription,
+#content > div#replacement-list {
+    padding-top: 66px;
+}
+
 /* LOGIN */
 #login {
     height: 100vh;
@@ -61,7 +79,7 @@ body {
     color: var(--primary-color);
 }
 
-#login .btn-submit {
+#login .btn-login-enter {
     width: 100%;
     font-weight: 600;
     margin-bottom: 0.8rem;
@@ -78,6 +96,7 @@ body {
     padding: 0 15px;
     display: flex;
     background-color: var(--primary-color);
+    justify-content: initial;
 }
 #forgot-account .description {
     color: var(--primary-color);
@@ -96,6 +115,9 @@ body {
 /* FIM ESQUECI A SENHA */
 
 /* DADOS ANTROPOMÉTRICOS DO USUÁRIO */
+#user-anthropometric-data {
+    
+}
 #user-anthropometric-data .collection{
     margin-top: 1rem;
     border: 0;
@@ -148,7 +170,7 @@ body {
 
 /*  PRESCRIÇÃO DIETÉTICA*/
 #dietary-prescription {
-    
+
 }
 
 #dietary-prescription .collapsible-header {
@@ -173,11 +195,14 @@ body {
 
 /* LISTA DE SUBSTITUIÇÃO */
 #replacement-list {
-
+    
 }
 /* FIM LISTA DE SUBSTITUIÇÃO */
 
 /* LISTA DE COMPRAS */
+#grocery-list {
+    
+}
 #grocery-list nav {
     margin-bottom: 2px;
 }
@@ -222,6 +247,9 @@ body {
 /* FIM LISTA DE COMPRAS */
 
 /* NOTIFICAÇÕES */
+#notifications {
+    
+}
 #notifications .switch label {
     display: flex;
     justify-content: space-between;
@@ -235,6 +263,9 @@ body {
 /* FIM NOTIFICAÇÕES */
 
 /* RECEITAS NUTRICIONAIS */
+#nutritional-recipes {
+    
+}
 #nutritional-recipes .collection {
     border:none;
 }
@@ -246,6 +277,9 @@ body {
 /* FIM RECEITAS NUTRICIONAIS */
 
 /* DETALHES DA RECEITA */
+#recipe-details .nav-wrapper{
+    justify-content: initial;
+}
 #tabs-recipe {
     margin-bottom: 5px;
 }
@@ -288,8 +322,41 @@ body {
     text-align: justify;
     font-size: 1rem;
 }
-
 /* FIM DETALHES DA RECEITA */
+
+/* ORIENTAÇÃO NUTRICIONAL */
+#nutritional-orientation {
+    
+}
+#nutritional-orientation .text-content {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    text-align: justify;
+}
+/* FIM ORIENTAÇÃO NUTRICIONAL */
+
+/* NAVIGATIONS BOTTOM */
+#navigation-bottom {
+    display: none;
+    background-color: #e6e6e6;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0;
+    justify-content: space-around;
+    height: 60px;
+}
+#navigation-bottom .navigation-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navigation-bottom .navigation-item img {
+    width: 100%;
+    max-width: 25px;
+}
+/* FIM NAVIGATIONS BOTTOM */
 
 /* STYLE GERAL */
 .row {
@@ -304,21 +371,88 @@ nav .nav-wrapper {
     padding: 0 15px;
     display: flex;
     background-color: var(--primary-color);
+    justify-content: space-between;
 }
 .title {
     margin: 0 16px;
     text-align: left;
-    font-size: 20px;
+    font-size: 1.3rem;
     font-weight: 600;
 }
 /* FIM STYLE GERAL */
+
+/* ICONS*/
+.icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.icon-resume {
+    background-image: url('../img/icons/resume.svg');
+    transition: .4s;
+}
+.icon-resume.active {
+    background-image: url('../img/icons/resume-active.svg');
+    margin-bottom: 8px;
+    transition: .4s;
+}
+
+.icon-contract {
+    background-image: url('../img/icons/contract.svg');
+    transition: .4s;
+}
+.icon-contract.active {
+    background-image: url('../img/icons/contract-active.svg');
+    margin-bottom: 8px;
+    transition: .4s;
+}
+
+.icon-groceries {
+    background-image: url('../img/icons/groceries.svg');
+    transition: .4s;
+}
+.icon-groceries.active {
+    background-image: url('../img/icons/groceries-active.svg');
+    margin-bottom: 8px;
+    transition: .4s;
+}
+.icon-recipe {
+    background-image: url('../img/icons/recipe.svg');
+    transition: .4s;
+}
+.icon-recipe.active {
+    background-image: url('../img/icons/recipe-active.svg');
+    margin-bottom: 8px;
+    transition: .4s;
+}
+.icon-swap {
+    background-image: url('../img/icons/swap.svg');
+    transition: .4s;
+}
+.icon-swap.active {
+    background-image: url('../img/icons/swap-active.svg');
+    margin-bottom: 8px;
+    transition: .4s;
+}
+.icon-text-document {
+    background-image: url('../img/icons/text-document.svg');
+    transition: .4s;
+}
+.icon-text-document.active {
+    background-image: url('../img/icons/text-document-active.svg');
+    margin-bottom: 8px;
+    transition: .4s;
+}
+/* FIM ICONS*/
 
 /* HELPERS */
 .p-0 {
     padding: 0!important;
 }
 .m-0 {
-    margin: 0!important;
+    margin: 0!important;    
 }
 /* HELPERS */
 
